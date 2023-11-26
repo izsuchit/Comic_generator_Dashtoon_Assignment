@@ -3,7 +3,7 @@ import './ComicGenerator.css';
 import { useState } from 'react';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import HorizontalSplitIcon from '@mui/icons-material/HorizontalSplit';
-import { Add, Download } from '@mui/icons-material';
+import { Add,Edit, Download } from '@mui/icons-material';
 
 // Main ComicGenerator component
 export const ComicGenerator = () => {
@@ -14,6 +14,7 @@ export const ComicGenerator = () => {
   const [userInput, setUserInput] = useState('');
   const [comicStrip, setComicStrip] = useState([]);
   const [activeSection, setActiveSection] = useState('home'); // State to track the active section
+  
 
   // Function to make API call for image generation
   async function fetchGeneratedImage(data) {
@@ -71,10 +72,22 @@ export const ComicGenerator = () => {
     setComicStrip((prevStrip) => [...prevStrip, selectedMainImage]);
   };
 
+ // Function to download images from the strip panel
+const downloadStripImages = () => {
+  // Loop through the comicStrip array and create a download link for each image
+  comicStrip.forEach((image, index) => {
+    const link = document.createElement('a');
+    link.href = image;
+    link.download = `comic_strip_${index + 1}.png`; // You can customize the file name
+    link.click();
+  });
+};
+
   // Function to change the active section
   const changeSection = (section) => {
     setActiveSection(section);
   };
+
 
   return (
     <div className="app">
@@ -147,9 +160,15 @@ export const ComicGenerator = () => {
             </div>
             {selectedMainImage && <img className="main" src={selectedMainImage} alt="" />}
             <div className="buttons" id="btn-panel">
-              <button className="Add_btn" onClick={addToComicStrip}>
+              <button className="Add_btn" onClick={() => { addToComicStrip();  }}>
                 Add in strip<Add />
               </button>
+                <div className="buttons" id="btn-panel">
+                <button className="Edit_btn" >
+                  Edit <Edit/>
+                </button>
+              </div>
+                 
             </div>
             <div>
               <div className="strip">
@@ -161,7 +180,7 @@ export const ComicGenerator = () => {
                 ))}
               </div>
               <div className="buttons" id="btn-panel">
-                <button className="download_btn">
+                <button className="download_btn" onClick={downloadStripImages}>
                   Download<Download />
                 </button>
               </div>
@@ -185,6 +204,33 @@ export const ComicGenerator = () => {
         {/* Service Section */}
         {activeSection === 'service' && (
           <div className="serviceSection">
+            <div className='textsection'>
+             <h2>Our Services</h2>
+    <p>
+      Welcome to our Comic Creator service! We offer a range of features and services to enhance your comic creation experience.
+    </p>
+
+    <div className="serviceCard">
+      <h3>Image Generation</h3>
+      <p>
+        Utilize our advanced image generation technology to create a set of 10 unique images based on your input text.
+      </p>
+    </div>
+
+    <div className="serviceCard">
+      <h3>Comic Strip Creation</h3>
+      <p>
+        Easily select your favorite image from the generated set and build your personalized comic strips.
+      </p>
+    </div>
+
+    <div className="serviceCard">
+      <h3>Creative Freedom</h3>
+      <p>
+        Unleash your creativity with our user-friendly interface, making comic creation an enjoyable and accessible process.
+      </p>
+              </div>
+              </div>
             {/* Add elements for the Service section */}
           </div>
         )}
