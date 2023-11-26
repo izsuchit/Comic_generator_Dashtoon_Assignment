@@ -150,7 +150,7 @@ a.active, a:hover{
     display: inline-block;
   }
   .images{
-    max-width: 33.3%;
+    max-width: 25%;
     padding: 5px;
     display: inline-block;
   }
