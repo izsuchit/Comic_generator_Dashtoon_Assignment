@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Running on local device 
 Step 1. Just clone the ripo in your local device.\
 Step 2. Run 'npm i' to install necessary dependencies.\
-Step 3. Run commond 'npm start' and your project live on http://localhost:3000.\
+Step 3. Run commond 'npm start' and your project live on http://localhost:3000.
 
 ## Available Scripts
 
