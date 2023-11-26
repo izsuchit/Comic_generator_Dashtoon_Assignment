@@ -10,10 +10,11 @@
     --secondary_color: black;
     --tertiary_color : #373817 ;
     --light_color: #ECE3CE;
+    --header_color:rgb(10, 29, 234);
   }
   
 nav{
-    background-color:rgb(72, 224, 224);
+    background-color:var(--header_color);
     height: 60px;
     width: 100%;
     border-bottom:2px solid var(--light_color);
@@ -89,7 +90,7 @@ a.active, a:hover{
         position: fixed;
         width: 30%;
         height: 40vh;
-        background: rgb(72, 224, 224);
+        background: var(--header_color);
         top: 40px;
         left: -100%;
         text-align: center; 
@@ -118,9 +119,12 @@ a.active, a:hover{
 .btnnav{
     margin-top: 10px;
     background: none;
-    color: var(--tertiary_color);
+    color: var(--primary_color);
     font-size: 20px; 
     
+}
+.btnnav:hover{
+  color: black;
 }
 
 .app{
@@ -129,12 +133,12 @@ a.active, a:hover{
 .container {
         display: flex;
         flex-wrap: wrap;
-        padding: 100px 10px 10px;
+        padding: 70px 10px 10px;
         gap: 20px;
         width: 100%;
         height: auto;
         margin: auto;
-        min-height: 100vh;
+        min-height: 90vh;
   }
   
   .leftPanel {
@@ -142,7 +146,7 @@ a.active, a:hover{
         height: auto;
         padding: 10px;
         border-radius: 5px;
-        background-color:rgb(124, 121, 121);
+        background-color:rgb(181, 238, 238);
   }
   .imageContainer{
     display: flex;
@@ -165,13 +169,13 @@ a.active, a:hover{
   .rightPanel {
         flex: 1 1 200px;
         height: auto;
-        background-color: rgb(124, 121, 121);
+        background-color: rgb(181, 238, 238);
         border-radius: 5px;
         overflow-y: auto;
         position: relative;
   }
   .strip{
-    background-color:rgb(124, 121, 121);
+    background-color:rgb(181, 238, 238);
     text-align: center;
     border-bottom: 1px solid var(--primary_color);
   }
@@ -182,7 +186,7 @@ a.active, a:hover{
         padding-bottom: 5px 0;
         top:0px;
         color: rgb(34, 33, 33);
-        background-color: rgb(124, 121, 121);;
+        background-color: rgb(189, 189, 109);
         position:sticky;
   }
   
@@ -209,6 +213,7 @@ a.active, a:hover{
   }
   
   .buttons{
+    margin-top: 2px;
     display: flex;
     gap: 5px;
     margin-bottom: 15px;
@@ -222,7 +227,7 @@ a.active, a:hover{
         gap:5px;
         cursor: pointer;
         padding: 5px 10px;
-        color: var(--light_color);
+        color: var(--secondary_color);
         background-color: var(--btn_color);
         font-size: 1.2rem;
         border: 1px solid var(--primary_color);
@@ -269,7 +274,7 @@ a.active, a:hover{
     height:50px;
     padding:10px 0;
     text-align: center;
-    background-color: rgb(72, 224, 224);
+    background-color: var(--header_color);
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: larger;
  } 
@@ -277,14 +282,14 @@ a.active, a:hover{
  .contactSection{
     width: 100%;
     height: 600px;
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     position: fixed;
     top: 50px;
  }
  .aboutSection{
     width: 100%;
     height: 600px;
-    background-color: black;
+    background-color:white;
     position: fixed;
     top: 50px;
     padding: 30px;
@@ -314,7 +319,7 @@ a.active, a:hover{
     
     }
  p{
-    color: white;
+    color: black;
     line-height: 1.5;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: larger;
@@ -322,13 +327,15 @@ a.active, a:hover{
  .serviceSection{
     width: 100%;
     height: 600px;
-    background-color: black;
+    background-color: white;
     position: fixed;
     top: 50px;
 
  }
  
-
+.contactSection p{
+  color: white;
+}
  .pic{
     height: 300px;
     width:300px;
