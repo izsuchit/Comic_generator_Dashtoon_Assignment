@@ -235,7 +235,7 @@ a.active, a:hover{
   }
   
   button:hover {
-      background-color: var(--primary_color);
+      background-color: black;
   }
   #btn-panel{
     padding-left: 15px;
