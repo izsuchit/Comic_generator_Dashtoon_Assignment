@@ -146,7 +146,7 @@ a.active, a:hover{
         height: auto;
         padding: 10px;
         border-radius: 5px;
-        background-color:rgb(181, 238, 238);
+        background-color:white;
   }
   .imageContainer{
     display: flex;
@@ -169,13 +169,13 @@ a.active, a:hover{
   .rightPanel {
         flex: 1 1 200px;
         height: auto;
-        background-color: rgb(181, 238, 238);
+        background-color: white;
         border-radius: 5px;
         overflow-y: auto;
         position: relative;
   }
   .strip{
-    background-color:rgb(181, 238, 238);
+    background-color:white;
     text-align: center;
     border-bottom: 1px solid var(--primary_color);
   }
