@@ -227,7 +227,7 @@ a.active, a:hover{
         gap:5px;
         cursor: pointer;
         padding: 5px 10px;
-        color: white;
+        color: black;
         background-color: (--header_color);
         font-size: 1.2rem;
         border: 1px solid black;
@@ -236,6 +236,7 @@ a.active, a:hover{
   
   button:hover {
       background-color: grey;
+      color:white;
   }
   #btn-panel{
     padding-left: 15px;
