@@ -228,14 +228,14 @@ a.active, a:hover{
         cursor: pointer;
         padding: 5px 10px;
         color: white;
-        background-color: black;
+        background-color: (--header_color);
         font-size: 1.2rem;
         border: 1px solid black;
         border-radius: 5px;
   }
   
   button:hover {
-      background-color: var(--header_color);
+      background-color: grey;
   }
   #btn-panel{
     padding-left: 15px;
