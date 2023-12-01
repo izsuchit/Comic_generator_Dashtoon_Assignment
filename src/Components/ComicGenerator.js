@@ -256,7 +256,7 @@ const downloadStripImages = () => {
           </div>
         )}
       </div>
-
+<djhsd
       {/* Footer */}
       <hr />
       <footer className="footer">&copy; Copyright 2023 | <a href="mailto:suchit159kumar@gmail.com">Suchit Kumar</a></footer>
